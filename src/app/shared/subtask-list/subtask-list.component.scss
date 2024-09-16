@@ -1,0 +1,156 @@
+.container {
+  padding: 0 !important;
+  width: 95%;
+}
+.title {
+  opacity: 1;
+  color: rgba(47, 48, 89, 1);
+  font-family: "CircularStd";
+  font-size: 20px;
+  font-weight: 600;
+  font-style: Medium;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.line {
+  border: 1px solid rgba(230, 235, 240, 1);
+  opacity: 1;
+}
+.subtask-section {
+  border-radius: 6px;
+  border: 1px solid rgba(233, 238, 249, 1);
+  opacity: 1;
+  background-color: rgba(250, 251, 253, 1);
+
+  .add-btn {
+    border: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+    opacity: 1;
+    color: rgba(104, 113, 150, 1);
+    font-family: "Circular-Std";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: left;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .subtask-header {
+    opacity: 1;
+    color: rgba(104, 113, 150, 1);
+    font-family: "Circular-Std";
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .subtask-list {
+    width: 100%;
+
+    .subtask-item {
+      align-items: center;
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 1);
+      width: 100%;
+      display: flex;
+      padding: 0.3rem;
+      border: 1px solid rgba(230, 235, 240, 1);
+
+      .completion-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 9px;
+        border: 1px solid rgba(233, 238, 249, 1);
+        opacity: 1;
+        background-color: rgba(104, 113, 150, 0.1);
+
+        &.completed {
+          border-radius: 9px;
+          border: 1px solid rgba(62, 64, 219, 0.2);
+          opacity: 1;
+          background-color: rgba(62, 64, 219, 0.1);
+        }
+      }
+
+      .subtask-input {
+        flex-grow: 1;
+        border: none;
+        padding: 5px;
+        font-size: 14px;
+        width: 90%;
+        color: #687196;
+
+        &:focus {
+          border-bottom-color: #007bff;
+          outline: none;
+        }
+      }
+
+      .remove-btn {
+        background: none;
+        border: none;
+        color: #ff5b5b;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 16px;
+      }
+
+      .remove-btn:hover {
+        color: #ff0000;
+      }
+    }
+  }
+}
+.main-content {
+  display: flex;
+  background-color: white;
+}
+.checkmark-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+mat-progress-bar {
+  margin-top: 10px;
+  height: 8px;
+  border-radius: 4px;
+  width: 95px;
+  &.mat-primary .mat-progress-bar-fill::after {
+    background-color: #3e40db;
+  }
+}
+.header-content {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.task-count {
+  opacity: 1;
+  color: rgba(104, 113, 150, 1);
+  font-family: "Circular-Std";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.sub {
+  padding: 6px;
+  opacity: 1;
+  color: rgba(104, 113, 150, 1);
+  font-family: "Circular-Std";
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+  border: 1px solid rgba(230, 235, 240, 1);
+}

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import url("https://naologic-com-assets.naologic.com/fonts/circular-std/circular-std.css");
+
+body {
+  font-family: "Circular-Std", sans-serif;
+  width: 590px;
+  .container {
+    padding: 0;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Circular-Std", sans-serif;
+}
+.mdc-linear-progress__bar-inner {
+  border-color: #3e40db !important; /* Custom color */
+}

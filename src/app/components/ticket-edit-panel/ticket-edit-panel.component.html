@@ -1,0 +1,79 @@
+<div class="main ms-4 me-4">
+  <div class="pilot mt-4">
+    <app-icons name="logicpilot"></app-icons>
+    <p class="pilot-text">
+      Ask Logic Pilot to generate subtasks or to summarize comments
+    </p>
+  </div>
+
+  <form [formGroup]="ticketForm" class="form-container mt-5">
+    <!-- Status Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="status"></app-icons>
+        <label>Status</label>
+      </div>
+      <div class="status1">
+        <span class="status-badge unpaid">{{
+          ticketForm.get("status")?.value
+        }}</span>
+      </div>
+    </div>
+
+    <!-- Assignee Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="assignee"></app-icons>
+        <label>Assignee</label>
+      </div>
+      <div class="status">
+        <input formControlName="assignee" placeholder="Enter name" />
+      </div>
+    </div>
+
+    <!-- Co-owner Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="coowner"></app-icons>
+        <label>Co-owner</label>
+      </div>
+      <div class="status">
+        <input formControlName="coOwner" placeholder="Enter Co-owner" />
+      </div>
+    </div>
+
+    <!-- Importance Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="importance"></app-icons>
+        <label>Importance</label>
+      </div>
+      <div class="status">
+        <input formControlName="importance" placeholder="Enter importance" />
+      </div>
+    </div>
+
+    <!-- Customer Name Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="customername"></app-icons>
+        <label>Customer name</label>
+      </div>
+      <div class="status">
+        <input formControlName="customer" placeholder="Enter name" />
+      </div>
+    </div>
+
+    <!-- Invoice ID Field -->
+    <div class="form-row">
+      <div class="info">
+        <app-icons name="invoiceid"></app-icons>
+        <label>Invoice ID</label>
+      </div>
+      <div class="status">
+        <input formControlName="invoiceId" placeholder="Enter invoice id" />
+      </div>
+    </div>
+  </form>
+</div>
+<app-subtask-list></app-subtask-list>

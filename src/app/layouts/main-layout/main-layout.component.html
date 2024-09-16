@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<ul class="nav nav-tabs ms-4" id="ticketTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="{ active: activeTab === 'details' }"
+      (click)="selectTab('details')"
+      id="details-tab"
+      type="button"
+    >
+      <app-icons name="details"></app-icons>Details
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="{ active: activeTab === 'activity' }"
+      (click)="selectTab('activity')"
+      id="activity-tab"
+      type="button"
+    >
+      <app-icons class="icon" name="activity"></app-icons>Activity
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="{ active: activeTab === 'comments' }"
+      (click)="selectTab('comments')"
+      id="comments-tab"
+      type="button"
+    >
+      <app-icons name="comments"></app-icons>Comments
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      [ngClass]="{ active: activeTab === 'attachments' }"
+      (click)="selectTab('attachments')"
+      id="attachments-tab"
+      type="button"
+    >
+      <app-icons name="attachments"></app-icons>Attachments
+    </button>
+  </li>
+</ul>
+<hr class="line" />
+
+<div class="tab-content">
+  <app-ticket-edit-panel
+    *ngIf="activeTab === 'details'"
+  ></app-ticket-edit-panel>
+</div>

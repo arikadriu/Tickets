@@ -1,0 +1,56 @@
+<div class="container mt-5 ms-4 subtask-header">
+  <div class="header-content">
+    <h3 class="title">Subtasks</h3>
+
+    <!-- Inline progress bar -->
+    <mat-progress-bar
+      mode="determinate"
+      [value]="getCompletionPercentage()"
+      class="progress-bar-inline"
+    ></mat-progress-bar>
+    <span class="task-count"
+      >{{ getCompletedCount() }}/{{ getSubtaskCount() }}</span
+    >
+  </div>
+</div>
+
+<hr class="line" />
+
+<div class="container mt-4 mb-5 ms-4">
+  <div class="subtask-section" [formGroup]="subtaskForm">
+    <div class="title-subtask"><p class="sub">Subtask name</p></div>
+
+    <div class="main-content" *ngIf="subtasks.controls.length">
+      <div formArrayName="subtasks" class="subtask-list">
+        <div
+          class="subtask-item"
+          *ngFor="let subtask of subtasks.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <!-- Completion Circle -->
+          <span
+            class="completion-circle"
+            [class.completed]="subtask.get('completed')?.value"
+            (click)="toggleCompleted(i)"
+          >
+            <i *ngIf="subtask.get('completed')?.value" class="fa fa-check">
+              <app-icons name="checkmark" class="checkmark-icon"></app-icons>
+            </i>
+          </span>
+
+          <!-- Subtask Name (Editable) -->
+          <input
+            #subtaskInput
+            type="text"
+            formControlName="name"
+            class="subtask-input"
+            placeholder="Enter subtask"
+          />
+        </div>
+      </div>
+    </div>
+    <button class="add-btn" (click)="addSubtask()">
+      <app-icons name="addsubtask"></app-icons> Add Subtask
+    </button>
+  </div>
+</div>
